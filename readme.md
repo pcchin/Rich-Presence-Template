@@ -76,8 +76,8 @@ Once finished:
 3. `String` Filename of small asset you uploaded to your application. [See step 4 of Creating your RPC application](#createrpc). To not have a small asset, leave it blank.
 4. `String` Text that will appear if mouse hovers over the large icon. [Template strings](#template) can be used.
 5. `String` Filename of large asset you uploaded to your application. [See step 4 of Creating your RPC application](#createrpc).
-6. `Int` The party size `Y` e.g. `(Y of X)`. [Special integer values](#template) can be used.
-7. `Int` Max party size `X` e.g. `(Y of X)`. [Special integer values](#template) can be used.
+6. `Int` The party size `Y` e.g. `(Y of X)`. [Special integers](#template) can be used.
+7. `Int` Max party size `X` e.g. `(Y of X)`. [Special integers](#template) can be used.
 8. `Int` Start time of the countdown in [Epochs](https://www.epochconverter.com/).
 9. `Int` End time of the countdown in [Epochs](https://www.epochconverter.com/).
 10. `Int` The duration of the countdown from the start time in seconds.
@@ -123,13 +123,13 @@ The app will fail under the following circumstances:
 - The value of `refresh_time` is less than 20
 - `maxpartysize` is less than `partysize`
 - `partysize` or `maxpartysize` is a decimal value
-- `partysize` or `maxpartysize` is a negative integer and is not any of the [special integer values](#template).
+- `partysize` or `maxpartysize` is a negative integer and is not any of the [special integers](#template).
 - `countdown_end` has a smaller value than `countdown_start` (The countdown ends before it is even started). This is not checked if `countdown_end` is not used.
 
 ## Release History
 
 * 0.2.0
-    * Added template strings and special integer values
+    * Added template strings and special integers
     * Added config options
     * Added failure conditions
 * 0.1.1
@@ -152,15 +152,15 @@ The app will fail under the following circumstances:
 
 > NOTE: As the original repository has been archived, I'm not sure whether pull requests are still being accepted. - pcchin
 
-## <a name="template"></a>Template Strings and Special Integer Values (SIV)
+## <a name="template"></a>Template Strings and Special Integers (SI)
 
 Template strings can be used to replace a specific string in your text with a dynamic value. For instance, a string countaining `${totalDaysRemaining} days / ${totalHoursRemaining} hours left` might be replaced with `5 days / 131 hours left`.
 
-Certain integer values, similar to template strings, can be used to replace a specific integer (number) with a dynamic value. Those values are called special integer values, or SIV for short. For instance, a integer with the value of `-1` might be replaced with the total days of the countdown.
+Certain integer values, similar to template strings, can be used to replace a specific integer (number) with a dynamic value. Those values are called special integers, or SI for short. For instance, a integer with the value of `-1` might be replaced with the total days of the countdown.
 
-The table for the possible template strings, their special integer values their corresponding values are shown below. The example uses a countdown of `5 days, 13 hours, 44 minutes and 31 seconds` and `2 days, 15 hours, 6 minutes and 7 seconds` has elapsed. For the count up, the example assumes that `3 days, 17 hours, 13 minutes and 55 seconds` has elapsed. The current date in the example is `17 December 2020 15:34`
+The table for the possible template strings, their special integers and their corresponding values are shown below. The example uses a countdown of `5 days, 13 hours, 44 minutes and 31 seconds` and `2 days, 15 hours, 6 minutes and 7 seconds` has elapsed. For the count up, the example assumes that `3 days, 17 hours, 13 minutes and 55 seconds` has elapsed. The current date in the example is `17 December 2020 15:34`
 
-| Template String | SIV | Dynamic Values | Example Countdown | Example Count Up |
+| Template String | SI | Dynamic Values | Example Countdown | Example Count Up |
 |-|-|-|-|-|
 | ${totalDays} | -1 ||||
 | ${totalHours} | -2 ||||
