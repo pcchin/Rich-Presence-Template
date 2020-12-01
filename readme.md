@@ -70,14 +70,14 @@ Once finished:
 }
 ```
 
-0. `String` The text under your Application name. [Template strings](#template) can be used.
-1. `String` Game state which will be placed on the left of your party information. [Template strings](#template) can be used. To not have a large asset, leave it blank.
-2. `String` Text that will appear if mouse hovers over the small icon. [Template strings](#template) can be used.
+0. `String` The text under your Application name.
+1. `String` Game state which will be placed on the left of your party information. To not have a large asset, leave it blank.
+2. `String` Text that will appear if mouse hovers over the small icon.
 3. `String` Filename of small asset you uploaded to your application. [See step 4 of Creating your RPC application](#createrpc). To not have a small asset, leave it blank.
-4. `String` Text that will appear if mouse hovers over the large icon. [Template strings](#template) can be used.
+4. `String` Text that will appear if mouse hovers over the large icon.
 5. `String` Filename of large asset you uploaded to your application. [See step 4 of Creating your RPC application](#createrpc).
-6. `Int` The party size `Y` e.g. `(Y of X)`. [Special integers](#template) can be used.
-7. `Int` Max party size `X` e.g. `(Y of X)`. [Special integers](#template) can be used.
+6. `Int` The party size `Y` e.g. `(Y of X)`.
+7. `Int` Max party size `X` e.g. `(Y of X)`.
 8. `Int` Start time of the countdown in [Epochs](https://www.epochconverter.com/).
 9. `Int` End time of the countdown in [Epochs](https://www.epochconverter.com/).
 10. `Int` The duration of the countdown from the start time in seconds.
@@ -128,8 +128,7 @@ The app will fail under the following circumstances:
 
 ## Release History
 
-* 0.2.0
-    * Added template strings and special integers
+* 0.1.2
     * Added config options
     * Added failure conditions
 * 0.1.1
@@ -151,58 +150,6 @@ The app will fail under the following circumstances:
 5. Create a new Pull Request.
 
 > NOTE: As the original repository has been archived, I'm not sure whether pull requests are still being accepted. - pcchin
-
-## <a name="template"></a>Template Strings and Special Integers (SI)
-
-Template strings can be used to replace a specific string in your text with a dynamic value. For instance, a string countaining `${totalDaysRemaining} days / ${totalHoursRemaining} hours left` might be replaced with `5 days / 131 hours left`.
-
-Certain integer values, similar to template strings, can be used to replace a specific integer (number) with a dynamic value. Those values are called special integers, or SI for short. For instance, a integer with the value of `-1` might be replaced with the total days of the countdown.
-
-The table for the possible template strings, their special integers and their corresponding values are shown below. The example uses a countdown of `5 days, 13 hours, 44 minutes and 31 seconds` and `2 days, 15 hours, 6 minutes and 7 seconds` has elapsed. For the count up, the example assumes that `3 days, 17 hours, 13 minutes and 55 seconds` has elapsed. The current date in the example is `17 December 2020 15:34`
-
-| Template String | SI | Dynamic Values | Example Countdown | Example Count Up |
-|-|-|-|-|-|
-| ${totalDays} | -1 ||||
-| ${totalHours} | -2 ||||
-| ${totalMins} | -3 ||||
-| ${totalSeconds} | -4 ||||
-| ${totalHoursInDay} | -5 ||||
-| ${totalMinsInDay} | -6 ||||
-| ${totalSecondsInDay} | -7 ||||
-| ${totalMinsInHour} | -8 ||||
-| ${totalSecondsInHour} | -9 ||||
-| ${totalSecondsInMin} | -10 ||||
-| ${elapsedDays} | -11 ||||
-| ${elapsedHours} | -12 ||||
-| ${elapsedMins} | -13 ||||
-| ${elapsedHoursInDay} | -14 ||||
-| ${elapsedMinsInDay} | -15 ||||
-| ${elapsedMinsInHour} | -16 ||||
-| ${remainingDays} | -17 ||||
-| ${remainingHours} | -18 ||||
-| ${remainingMins} | -19 ||||
-| ${remainingHoursInDay} | -20 ||||
-| ${remainingMinsInDay} | -21 ||||
-| ${remainingMinsInHour} | -22 ||||
-| ${currentYear} | -23 ||||
-| ${currentMonthNumber} | -24 ||||
-| ${currentMonthTextShort} | -25 ||||
-| ${currentMonthTextLong} | -26 ||||
-| ${currentDayInYear} | -27 ||||
-| ${currentDayInMonth} | -28 ||||
-| ${currentHourInYear} | -29 ||||
-| ${currentHourInMonth} | -30 ||||
-| ${current24Hour} | -31 ||||
-| ${current12Hour} | -32 ||||
-| ${currentAMOrPM} | -33 ||||
-| ${currentMinuteInYear} | -34 ||||
-| ${currentMinuteInMonth} | -35 ||||
-| ${currentMinuteInDay} | -36 ||||
-| ${currentMinuteInHour} | -37 ||||
-
-// TODO: Complete
-
-> NOTE: All the dynamic values are rounded down.
 
 ## Contact
 
