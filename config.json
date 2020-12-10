@@ -1,5 +1,5 @@
 {
-    "Client_Id": "385188316523266052",
+    "Client_Id": "775296777515040778",
 
     "Rich_Presence":{
         "details": "Creating a RPC repo",
@@ -8,10 +8,16 @@
         "file_username": "indyprofile",
         "bannername": "Rich Presence",
         "file_bannername": "background",
+        "partysize": 12,
         "maxpartysize": 100,
-        "countdown_start": 3600,
-        "Refresh": true,
-        "Refresh_time": 15
+        "countdown_start": 1577836800,
+        "countdown_end": 1609459200,
+        "countdown_duration": 3600,
+        "use_countdown_end": true,
+        "count_up": false,
+        "disable_timer": false,
+        "refresh": true,
+        "refresh_time": 15
     },
     
     "Dont_Touch":{

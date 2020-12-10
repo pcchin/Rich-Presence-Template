@@ -81,12 +81,11 @@ Once finished:
 8. `Int` Start time of the countdown in [Epochs](https://www.epochconverter.com/).
 9. `Int` End time of the countdown in [Epochs](https://www.epochconverter.com/).
 10. `Int` The duration of the countdown from the start time in seconds.
-11. `Bool` Whether `countdown_end` or `countdown_duration` will be used. If `countdown_end` is used, `countdown_duration` will not be taken into account and vice versa. Defaults to `true`.
-12. `Bool` If you want to show a count up instead of a countdown. If this is set to `true`, the values of \[9\], \[10\] and \[11\] will be ignored. Defaults to `false`.
+11. `Bool` Whether `countdown_end` or `countdown_duration` will be used. If `countdown_end` is used, `countdown_duration` will not be taken into account and vice versa.
+12. `Bool` If you want to show a count up instead of a countdown. If this is set to `true`, the values of \[9\], \[10\] and \[11\] will be ignored.
 13. `Bool` If you want to disable the timer entirely (no count ups or countdowns). If this is set to `true`, the values of \[8\], \[9\], \[10\], \[11\] and \[12\] will be ignored.
-14. `Float` The hours difference from UTC that your time zone is located in. ***Must be a valid double enclosed in a string, such as "7.5"***
-15. `Bool` If you want the RPC to update or not, defaults to `true`.
-16. `Int` The time in seconds you want it to refresh. ***Must be >= 20***
+14. `Bool` If you want the RPC to update or not.
+15. `Int` The time in seconds you want it to refresh. ***Must be >= 20***
 
 ## <a name="createrpc"></a>Creating your RPC application
 
@@ -119,7 +118,6 @@ If you need help or have questions add `Indy#6602` on Discord.
 
 The app will fail under the following circumstances:
 
-- `timezone` is not a valid float.
 - The value of `refresh_time` is less than 20
 - `maxpartysize` is less than `partysize`
 - `partysize` or `maxpartysize` is a decimal value
